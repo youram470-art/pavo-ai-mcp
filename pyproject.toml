@@ -1,0 +1,29 @@
+[project]
+name = "pavo-ai-mcp"
+version = "0.1.0"
+description = "MCP server for Pavo AI: turn a scene or a still image into a short video clip"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Xinyue Zhan" }]
+keywords = ["mcp", "ai-video", "text-to-video", "image-to-video", "short-drama"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+dependencies = ["mcp>=1.0.0"]
+
+[project.urls]
+Homepage = "https://pavoai.app/"
+Source = "https://github.com/youram470-art/pavo-ai-mcp"
+Documentation = "https://pavoai.app/prompts"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pavo_ai_mcp"]
+
+[project.scripts]
+pavo-ai-mcp = "pavo_ai_mcp:main"
